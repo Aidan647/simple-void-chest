@@ -1,7 +1,6 @@
 local modify = function(event)
 	if event.entity.name == "simple-void-chest" then
 		event.entity.remove_unfiltered_items = true
-		event.entity.override_logistic_mode = defines.logistic_mode.none
 	end
 end
 

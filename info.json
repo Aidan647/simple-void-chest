@@ -1,10 +1,10 @@
 {
 	"name": "simple-void-chest",
-	"version": "2.1.0",
+	"version": "2.0.0",
 	"title": "Simple Void Chest",
 	"author": "Aidan647",
 	"homepage": "https://github.com/Aidan647/simple-void-chest",
 	"description": "A simple void chest that can be used to delete items.",
-	"factorio_version": "2.1",
+	"factorio_version": "2.0",
 	"dependencies": ["base", "? space-age"]
 }
