@@ -31,7 +31,7 @@ for (const file of files) {
 	if (!file.endsWith(".png")) continue
 	console.log(`Processing ${file}...`)
 	await sharp(filePath)
-		.png({ compressionLevel: 9, adaptiveFiltering: true, force: true, palette: true, effort: 10 })
+		.png({ compressionLevel: 9, force: true, palette: true, effort: 10 })
 		.toBuffer()
 		.then((buffer) => fs.writeFile(filePath, buffer))
 		.catch((err) => console.error(`Error processing ${file}: ${err.message}`))
