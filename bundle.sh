@@ -44,6 +44,9 @@ rsync -a --info=none \
     --exclude="out" \
     . "./tmp/$NAME/"
 
+# Run pre-zip processing script
+bun start "./tmp/$NAME"
+
 # Single zip pass into tmp, then move to out
 cd "./tmp"
 zip -9 -r "$OUTPUT" "$NAME"

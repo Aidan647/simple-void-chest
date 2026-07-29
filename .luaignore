@@ -1,4 +1,12 @@
 .*
+bundle.sh
 tmp
 out
 *.xcf
+js
+package-lock.json
+bun.lock
+package.json
+node_modules
+tsconfig.json
+index.ts
