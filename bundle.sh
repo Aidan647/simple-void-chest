@@ -5,8 +5,8 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$SCRIPT_DIR"
 
 # Read name and version from info.json
-NAME=$(jq -r '.name' info.json)
-VERSION=$(jq -r '.version' info.json)
+NAME=$(jq -r '.name' src/info.json)
+VERSION=$(jq -r '.version' src/info.json)
 OUTPUT="${NAME}_${VERSION}.zip"
 OUT_DIR="./out"
 
@@ -37,12 +37,7 @@ rm -rf ./tmp
 mkdir -p "./tmp/$NAME"
 rsync -a --info=none \
     "${EXCLUDE[@]}" \
-    --exclude=".gitignore" \
-    --exclude=".luaignore" \
-    --exclude="bundle.sh" \
-    --exclude="tmp" \
-    --exclude="out" \
-    . "./tmp/$NAME/"
+    "./src/" "./tmp/$NAME/"
 
 # Run pre-zip processing script
 bun start "./tmp/$NAME"
