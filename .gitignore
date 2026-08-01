@@ -40,6 +40,6 @@ luac.out
 *.hex
 
 node_modules
-
+factorio-data
 tmp/
 out/

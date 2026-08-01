@@ -1,18 +1,19 @@
 {
-  "name": "simple-void-chest",
-  "module": "index.ts",
-  "type": "module",
-  "private": true,
-  "scripts": {
-    "start": "bun run index.ts"
-  },
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^7.0.2"
-  },
-  "dependencies": {
-    "sharp": "^0.35.3"
-  }
+	"name": "simple-void-chest",
+	"module": "index.ts",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"start": "bun run index.ts",
+		"develop": "bun run develop.ts"
+	},
+	"devDependencies": {
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^7.0.2"
+	},
+	"dependencies": {
+		"sharp": "^0.35.3"
+	}
 }
