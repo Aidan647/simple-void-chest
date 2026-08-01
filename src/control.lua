@@ -3,7 +3,6 @@ local modify = function(event)
 	or event.entity.name == "entity-ghost" and event.entity.ghost_name == "simple-void-chest"
 	then
 		event.entity.remove_unfiltered_items = true
-		event.entity.override_logistic_mode = defines.logistic_mode.none
 	end
 end
 
@@ -21,11 +20,9 @@ script.on_event(defines.events.on_runtime_mod_setting_changed, function(event)
 		for _, surface in pairs(game.surfaces) do
 			for _, entity in pairs(surface.find_entities_filtered { name = "simple-void-chest" }) do
 				entity.remove_unfiltered_items = true
-				entity.override_logistic_mode = defines.logistic_mode.none
 			end
 			for _, ghost in pairs(surface.find_entities_filtered { name = "entity-ghost", ghost_name = "simple-void-chest" }) do
 				ghost.remove_unfiltered_items = true
-				ghost.override_logistic_mode = defines.logistic_mode.none
 			end
 		end
 		for _, player in pairs(game.players) do
