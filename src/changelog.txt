@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.2
+Date: 01. 08. 2026
+  Bugfixes:
+    - Fixed issue where build ghosts of the Void Chest would not have the correct properties applied.
+  Features:
+    - Added a global (Map) setting to refresh all Void Chests in the game.
+---------------------------------------------------------------------------------------------------
 Version: 2.1.1
 Date: 29. 07. 2026
   Optimizations:
